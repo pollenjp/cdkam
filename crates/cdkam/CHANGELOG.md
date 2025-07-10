@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.5](https://github.com/pollenjp/cdkam/compare/v0.2.4...v0.2.5) - 2025-07-10
+## [0.3.0](https://github.com/pollenjp/cdkam/releases/tag/v0.3.0) - 2025-07-10
+
+- compare with <https://github.com/pollenjp/cdk-ansible/releases/tag/cdkam-v0.2.4>
 
 ### Other
 
