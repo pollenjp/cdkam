@@ -1,5 +1,5 @@
 use ::cdk_ansible::{
-    DeployStack, ExeParallel, ExePlay, ExeSequential, ExeSingle, OptU, Play, PlayOptions, Task,
+    ExeParallel, ExePlay, ExeSequential, ExeSingle, OptU, Play, PlayOptions, Stack, Task,
     TaskOptions,
 };
 use indexmap::IndexMap;
@@ -42,7 +42,7 @@ impl SampleStack {
     }
 }
 
-impl DeployStack for SampleStack {
+impl Stack for SampleStack {
     #[expect(clippy::expect_used, reason = "Logical failure")]
     fn name(&self) -> &str {
         std::any::type_name::<Self>()

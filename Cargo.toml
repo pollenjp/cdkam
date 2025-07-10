@@ -11,9 +11,9 @@ license = "MIT"
 keywords = ["ansible", "cdk", "cdk-ansible"]
 
 [workspace.dependencies]
-# FIXME: fix before release
-cdk-ansible = { git = "https://github.com/pollenjp/cdk-ansible.git", branch = "main" }
 cdkam = { path = "crates/cdkam" }
+
+cdk-ansible = { version = "0.2" }
 
 anyhow = { version = "1.0.95" }
 indexmap = { version = "2.7.1", features = ["serde"] }

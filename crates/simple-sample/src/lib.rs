@@ -1,6 +1,6 @@
 use ::anyhow::Result;
 use ::cdk_ansible::{
-    AllInventoryVarsGen, DeployApp, HostInventoryVars, HostInventoryVarsGenerator, Inventory,
+    AllInventoryVarsGen, App, HostInventoryVars, HostInventoryVarsGenerator, Inventory,
     InventoryChild, InventoryRoot, OptU,
 };
 
@@ -15,7 +15,7 @@ pub fn run() -> Result<()> {
         },
     };
 
-    let mut app = DeployApp::new(std::env::args().collect());
+    let mut app = App::new(std::env::args().collect());
     app.add_inventory(host_pool.to_inventory()?)?;
     app.add_stack(Box::new(SampleStack::new(&host_pool)))?;
     app.run()
@@ -29,7 +29,7 @@ struct HostPool {
 impl HostPool {
     fn to_inventory(&self) -> Result<Inventory> {
         Ok(Inventory {
-            name: "inventory".into(), // generate 'inventory.yaml' file
+            name: "dev".into(), // generate 'dev.yaml' file
             root: InventoryRoot {
                 all: InventoryChild {
                     hosts: OptU::Some(self.inventory_vars()?.into_iter().collect()),
@@ -48,7 +48,7 @@ impl HostInventoryVarsGenerator for LocalHost {
     fn gen_host_vars(&self) -> Result<HostInventoryVars> {
         Ok(HostInventoryVars {
             ansible_host: self.name.clone(),
-            inventory_vars: vec![],
+            inventory_vars: vec![("ansible_connection".into(), "local".into())],
         })
     }
 }
