@@ -9,3 +9,4 @@ git_tag_enable = true
 [[package]]
 name = "cdkam"
 release = true
+publish = true
