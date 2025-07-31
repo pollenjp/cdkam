@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,17 +21,17 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "auto_login"
     )]
-    pub auto_login: OptU<::cdk_ansible::StringOrMap>,
+    pub auto_login: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "cli_path"
     )]
-    pub cli_path: OptU<::cdk_ansible::StringOrPath>,
+    pub cli_path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "search_terms"
     )]
-    pub search_terms: OptU<::cdk_ansible::StringOrVec>,
+    pub search_terms: OptU<::cdk_ansible_core::core::StringOrVec>,
 }

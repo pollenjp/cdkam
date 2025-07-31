@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -33,7 +33,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ipa_port"
     )]
-    pub ipa_port: OptU<::cdk_ansible::IntOrString>,
+    pub ipa_port: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -45,7 +45,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ipa_timeout"
     )]
-    pub ipa_timeout: OptU<::cdk_ansible::IntOrString>,
+    pub ipa_timeout: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,7 +57,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ipaconfigstring"
     )]
-    pub ipaconfigstring: OptU<::cdk_ansible::StringOrVec>,
+    pub ipaconfigstring: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,13 +81,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ipagroupobjectclasses"
     )]
-    pub ipagroupobjectclasses: OptU<::cdk_ansible::StringOrVec>,
+    pub ipagroupobjectclasses: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipagroupsearchfields"
     )]
-    pub ipagroupsearchfields: OptU<::cdk_ansible::StringOrVec>,
+    pub ipagroupsearchfields: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -99,59 +99,59 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ipakrbauthzdata"
     )]
-    pub ipakrbauthzdata: OptU<::cdk_ansible::StringOrVec>,
+    pub ipakrbauthzdata: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipamaxusernamelength"
     )]
-    pub ipamaxusernamelength: OptU<::cdk_ansible::IntOrString>,
+    pub ipamaxusernamelength: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipapwdexpadvnotify"
     )]
-    pub ipapwdexpadvnotify: OptU<::cdk_ansible::IntOrString>,
+    pub ipapwdexpadvnotify: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipasearchrecordslimit"
     )]
-    pub ipasearchrecordslimit: OptU<::cdk_ansible::IntOrString>,
+    pub ipasearchrecordslimit: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipasearchtimelimit"
     )]
-    pub ipasearchtimelimit: OptU<::cdk_ansible::IntOrString>,
+    pub ipasearchtimelimit: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipaselinuxusermaporder"
     )]
-    pub ipaselinuxusermaporder: OptU<::cdk_ansible::StringOrVec>,
+    pub ipaselinuxusermaporder: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipauserauthtype"
     )]
-    pub ipauserauthtype: OptU<::cdk_ansible::StringOrVec>,
+    pub ipauserauthtype: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipauserobjectclasses"
     )]
-    pub ipauserobjectclasses: OptU<::cdk_ansible::StringOrVec>,
+    pub ipauserobjectclasses: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ipausersearchfields"
     )]
-    pub ipausersearchfields: OptU<::cdk_ansible::StringOrVec>,
+    pub ipausersearchfields: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

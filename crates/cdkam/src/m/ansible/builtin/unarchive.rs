@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -27,37 +27,37 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "copy"
     )]
-    pub copy: OptU<::cdk_ansible::BoolOrString>,
+    pub copy: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "creates"
     )]
-    pub creates: OptU<::cdk_ansible::StringOrPath>,
+    pub creates: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "decrypt"
     )]
-    pub decrypt: OptU<::cdk_ansible::BoolOrString>,
+    pub decrypt: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "dest"
     )]
-    pub dest: OptU<::cdk_ansible::StringOrPath>,
+    pub dest: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "exclude"
     )]
-    pub exclude: OptU<::cdk_ansible::StringOrVec>,
+    pub exclude: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "extra_opts"
     )]
-    pub extra_opts: OptU<::cdk_ansible::StringOrVec>,
+    pub extra_opts: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -69,25 +69,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "include"
     )]
-    pub include: OptU<::cdk_ansible::StringOrVec>,
+    pub include: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "io_buffer_size"
     )]
-    pub io_buffer_size: OptU<::cdk_ansible::IntOrString>,
+    pub io_buffer_size: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "keep_newer"
     )]
-    pub keep_newer: OptU<::cdk_ansible::BoolOrString>,
+    pub keep_newer: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "list_files"
     )]
-    pub list_files: OptU<::cdk_ansible::BoolOrString>,
+    pub list_files: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -105,7 +105,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "remote_src"
     )]
-    pub remote_src: OptU<::cdk_ansible::BoolOrString>,
+    pub remote_src: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -135,17 +135,17 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "src"
     )]
-    pub src: OptU<::cdk_ansible::StringOrPath>,
+    pub src: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "unsafe_writes"
     )]
-    pub unsafe_writes: OptU<::cdk_ansible::BoolOrString>,
+    pub unsafe_writes: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

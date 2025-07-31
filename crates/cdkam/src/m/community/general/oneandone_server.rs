@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -39,19 +39,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "auto_increment"
     )]
-    pub auto_increment: OptU<::cdk_ansible::BoolOrString>,
+    pub auto_increment: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "cores_per_processor"
     )]
-    pub cores_per_processor: OptU<::cdk_ansible::IntOrString>,
+    pub cores_per_processor: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "count"
     )]
-    pub count: OptU<::cdk_ansible::IntOrString>,
+    pub count: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,7 +81,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "hdds"
     )]
-    pub hdds: OptU<::cdk_ansible::StringOrVec>,
+    pub hdds: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -141,23 +141,23 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "vcore"
     )]
-    pub vcore: OptU<::cdk_ansible::IntOrString>,
+    pub vcore: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait"
     )]
-    pub wait: OptU<::cdk_ansible::BoolOrString>,
+    pub wait: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_interval"
     )]
-    pub wait_interval: OptU<::cdk_ansible::IntOrString>,
+    pub wait_interval: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_timeout"
     )]
-    pub wait_timeout: OptU<::cdk_ansible::IntOrString>,
+    pub wait_timeout: OptU<::cdk_ansible_core::core::IntOrString>,
 }

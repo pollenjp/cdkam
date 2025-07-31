@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ack_venv_creation_deprecation"
     )]
-    pub ack_venv_creation_deprecation: OptU<::cdk_ansible::BoolOrString>,
+    pub ack_venv_creation_deprecation: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -39,7 +39,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "clear"
     )]
-    pub clear: OptU<::cdk_ansible::BoolOrString>,
+    pub clear: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,7 +57,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "failfast"
     )]
-    pub failfast: OptU<::cdk_ansible::BoolOrString>,
+    pub failfast: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -69,37 +69,37 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "link"
     )]
-    pub link: OptU<::cdk_ansible::BoolOrString>,
+    pub link: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "merge"
     )]
-    pub merge: OptU<::cdk_ansible::BoolOrString>,
+    pub merge: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "project_path"
     )]
-    pub project_path: OptU<::cdk_ansible::StringOrPath>,
+    pub project_path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "pythonpath"
     )]
-    pub pythonpath: OptU<::cdk_ansible::StringOrPath>,
+    pub pythonpath: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "settings"
     )]
-    pub settings: OptU<::cdk_ansible::StringOrPath>,
+    pub settings: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skip"
     )]
-    pub skip: OptU<::cdk_ansible::BoolOrString>,
+    pub skip: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -111,5 +111,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "virtualenv"
     )]
-    pub virtualenv: OptU<::cdk_ansible::StringOrPath>,
+    pub virtualenv: OptU<::cdk_ansible_core::core::StringOrPath>,
 }

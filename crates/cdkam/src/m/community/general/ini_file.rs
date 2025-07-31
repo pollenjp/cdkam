@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "allow_no_value"
     )]
-    pub allow_no_value: OptU<::cdk_ansible::BoolOrString>,
+    pub allow_no_value: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -33,25 +33,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "backup"
     )]
-    pub backup: OptU<::cdk_ansible::BoolOrString>,
+    pub backup: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "create"
     )]
-    pub create: OptU<::cdk_ansible::BoolOrString>,
+    pub create: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "exclusive"
     )]
-    pub exclusive: OptU<::cdk_ansible::BoolOrString>,
+    pub exclusive: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "follow"
     )]
-    pub follow: OptU<::cdk_ansible::BoolOrString>,
+    pub follow: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -63,7 +63,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ignore_spaces"
     )]
-    pub ignore_spaces: OptU<::cdk_ansible::BoolOrString>,
+    pub ignore_spaces: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -75,13 +75,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "modify_inactive_option"
     )]
-    pub modify_inactive_option: OptU<::cdk_ansible::BoolOrString>,
+    pub modify_inactive_option: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "no_extra_spaces"
     )]
-    pub no_extra_spaces: OptU<::cdk_ansible::BoolOrString>,
+    pub no_extra_spaces: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -99,7 +99,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "path"
     )]
-    pub path: OptU<::cdk_ansible::StringOrPath>,
+    pub path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -111,7 +111,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "section_has_values"
     )]
-    pub section_has_values: OptU<::cdk_ansible::StringOrVec>,
+    pub section_has_values: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -147,7 +147,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "unsafe_writes"
     )]
-    pub unsafe_writes: OptU<::cdk_ansible::BoolOrString>,
+    pub unsafe_writes: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -159,5 +159,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "values"
     )]
-    pub values: OptU<::cdk_ansible::StringOrVec>,
+    pub values: OptU<::cdk_ansible_core::core::StringOrVec>,
 }

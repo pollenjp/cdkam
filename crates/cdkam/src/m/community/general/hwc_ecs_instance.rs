@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -33,7 +33,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "data_volumes"
     )]
-    pub data_volumes: OptU<::cdk_ansible::StringOrVec>,
+    pub data_volumes: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,7 +57,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "enable_auto_recovery"
     )]
-    pub enable_auto_recovery: OptU<::cdk_ansible::BoolOrString>,
+    pub enable_auto_recovery: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -99,7 +99,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "nics"
     )]
-    pub nics: OptU<::cdk_ansible::StringOrVec>,
+    pub nics: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -123,25 +123,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "root_volume"
     )]
-    pub root_volume: OptU<::cdk_ansible::StringOrMap>,
+    pub root_volume: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "security_groups"
     )]
-    pub security_groups: OptU<::cdk_ansible::StringOrVec>,
+    pub security_groups: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "server_metadata"
     )]
-    pub server_metadata: OptU<::cdk_ansible::StringOrMap>,
+    pub server_metadata: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "server_tags"
     )]
-    pub server_tags: OptU<::cdk_ansible::StringOrMap>,
+    pub server_tags: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -159,7 +159,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "timeouts"
     )]
-    pub timeouts: OptU<::cdk_ansible::StringOrMap>,
+    pub timeouts: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

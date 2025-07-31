@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -57,13 +57,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "auto_devops_enabled"
     )]
-    pub auto_devops_enabled: OptU<::cdk_ansible::BoolOrString>,
+    pub auto_devops_enabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "avatar_path"
     )]
-    pub avatar_path: OptU<::cdk_ansible::StringOrPath>,
+    pub avatar_path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -93,31 +93,31 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "force_delete"
     )]
-    pub force_delete: OptU<::cdk_ansible::BoolOrString>,
+    pub force_delete: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "lfs_enabled"
     )]
-    pub lfs_enabled: OptU<::cdk_ansible::BoolOrString>,
+    pub lfs_enabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "lock_duo_features_enabled"
     )]
-    pub lock_duo_features_enabled: OptU<::cdk_ansible::BoolOrString>,
+    pub lock_duo_features_enabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "membership_lock"
     )]
-    pub membership_lock: OptU<::cdk_ansible::BoolOrString>,
+    pub membership_lock: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "mentions_disabled"
     )]
-    pub mentions_disabled: OptU<::cdk_ansible::BoolOrString>,
+    pub mentions_disabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -141,13 +141,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "prevent_forking_outside_group"
     )]
-    pub prevent_forking_outside_group: OptU<::cdk_ansible::BoolOrString>,
+    pub prevent_forking_outside_group: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "prevent_sharing_groups_outside_hierarchy"
     )]
-    pub prevent_sharing_groups_outside_hierarchy: OptU<::cdk_ansible::BoolOrString>,
+    pub prevent_sharing_groups_outside_hierarchy: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -159,25 +159,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "request_access_enabled"
     )]
-    pub request_access_enabled: OptU<::cdk_ansible::BoolOrString>,
+    pub request_access_enabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "require_two_factor_authentication"
     )]
-    pub require_two_factor_authentication: OptU<::cdk_ansible::BoolOrString>,
+    pub require_two_factor_authentication: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "service_access_tokens_expiration_enforced"
     )]
-    pub service_access_tokens_expiration_enforced: OptU<::cdk_ansible::BoolOrString>,
+    pub service_access_tokens_expiration_enforced: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "share_with_group_lock"
     )]
-    pub share_with_group_lock: OptU<::cdk_ansible::BoolOrString>,
+    pub share_with_group_lock: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -201,7 +201,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

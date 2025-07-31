@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -27,37 +27,37 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "chef"
     )]
-    pub chef: OptU<::cdk_ansible::StringOrMap>,
+    pub chef: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "deregister"
     )]
-    pub deregister: OptU<::cdk_ansible::BoolOrString>,
+    pub deregister: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "deregistration"
     )]
-    pub deregistration: OptU<::cdk_ansible::StringOrMap>,
+    pub deregistration: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "ec2"
     )]
-    pub ec2: OptU<::cdk_ansible::StringOrMap>,
+    pub ec2: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "keepalive"
     )]
-    pub keepalive: OptU<::cdk_ansible::StringOrMap>,
+    pub keepalive: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "keepalives"
     )]
-    pub keepalives: OptU<::cdk_ansible::BoolOrString>,
+    pub keepalives: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -69,37 +69,37 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "puppet"
     )]
-    pub puppet: OptU<::cdk_ansible::StringOrMap>,
+    pub puppet: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "redact"
     )]
-    pub redact: OptU<::cdk_ansible::StringOrVec>,
+    pub redact: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "registration"
     )]
-    pub registration: OptU<::cdk_ansible::StringOrMap>,
+    pub registration: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "safe_mode"
     )]
-    pub safe_mode: OptU<::cdk_ansible::BoolOrString>,
+    pub safe_mode: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "servicenow"
     )]
-    pub servicenow: OptU<::cdk_ansible::StringOrMap>,
+    pub servicenow: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "socket"
     )]
-    pub socket: OptU<::cdk_ansible::StringOrMap>,
+    pub socket: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -111,5 +111,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "subscriptions"
     )]
-    pub subscriptions: OptU<::cdk_ansible::StringOrVec>,
+    pub subscriptions: OptU<::cdk_ansible_core::core::StringOrVec>,
 }

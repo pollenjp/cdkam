@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "aaa"
     )]
-    pub aaa: OptU<::cdk_ansible::StringOrVec>,
+    pub aaa: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -33,7 +33,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "backend_strip_basic_auth"
     )]
-    pub backend_strip_basic_auth: OptU<::cdk_ansible::BoolOrString>,
+    pub backend_strip_basic_auth: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -111,19 +111,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "frontend_session_allow_persistency"
     )]
-    pub frontend_session_allow_persistency: OptU<::cdk_ansible::BoolOrString>,
+    pub frontend_session_allow_persistency: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "frontend_session_lifetime"
     )]
-    pub frontend_session_lifetime: OptU<::cdk_ansible::IntOrString>,
+    pub frontend_session_lifetime: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "frontend_session_lifetime_limited"
     )]
-    pub frontend_session_lifetime_limited: OptU<::cdk_ansible::BoolOrString>,
+    pub frontend_session_lifetime_limited: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -135,13 +135,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "frontend_session_timeout"
     )]
-    pub frontend_session_timeout: OptU<::cdk_ansible::IntOrString>,
+    pub frontend_session_timeout: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "frontend_session_timeout_enabled"
     )]
-    pub frontend_session_timeout_enabled: OptU<::cdk_ansible::BoolOrString>,
+    pub frontend_session_timeout_enabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -153,13 +153,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "headers"
     )]
-    pub headers: OptU<::cdk_ansible::StringOrMap>,
+    pub headers: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "logout_delegation_urls"
     )]
-    pub logout_delegation_urls: OptU<::cdk_ansible::StringOrVec>,
+    pub logout_delegation_urls: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -177,7 +177,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "redirect_to_requested_url"
     )]
-    pub redirect_to_requested_url: OptU<::cdk_ansible::BoolOrString>,
+    pub redirect_to_requested_url: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -195,7 +195,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "utm_port"
     )]
-    pub utm_port: OptU<::cdk_ansible::IntOrString>,
+    pub utm_port: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -213,5 +213,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,31 +21,31 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "binstub_directory"
     )]
-    pub binstub_directory: OptU<::cdk_ansible::StringOrPath>,
+    pub binstub_directory: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "chdir"
     )]
-    pub chdir: OptU<::cdk_ansible::StringOrPath>,
+    pub chdir: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "clean"
     )]
-    pub clean: OptU<::cdk_ansible::BoolOrString>,
+    pub clean: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "deployment_mode"
     )]
-    pub deployment_mode: OptU<::cdk_ansible::BoolOrString>,
+    pub deployment_mode: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "exclude_groups"
     )]
-    pub exclude_groups: OptU<::cdk_ansible::StringOrVec>,
+    pub exclude_groups: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -63,19 +63,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "gem_path"
     )]
-    pub gem_path: OptU<::cdk_ansible::StringOrPath>,
+    pub gem_path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "gemfile"
     )]
-    pub gemfile: OptU<::cdk_ansible::StringOrPath>,
+    pub gemfile: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "local"
     )]
-    pub local: OptU<::cdk_ansible::BoolOrString>,
+    pub local: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -87,5 +87,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "user_install"
     )]
-    pub user_install: OptU<::cdk_ansible::BoolOrString>,
+    pub user_install: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

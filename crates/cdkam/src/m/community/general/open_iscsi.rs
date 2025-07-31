@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,25 +21,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "auto_node_startup"
     )]
-    pub auto_node_startup: OptU<::cdk_ansible::BoolOrString>,
+    pub auto_node_startup: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "auto_portal_startup"
     )]
-    pub auto_portal_startup: OptU<::cdk_ansible::BoolOrString>,
+    pub auto_portal_startup: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "discover"
     )]
-    pub discover: OptU<::cdk_ansible::BoolOrString>,
+    pub discover: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "login"
     )]
-    pub login: OptU<::cdk_ansible::BoolOrString>,
+    pub login: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -87,13 +87,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "rescan"
     )]
-    pub rescan: OptU<::cdk_ansible::BoolOrString>,
+    pub rescan: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "show_nodes"
     )]
-    pub show_nodes: OptU<::cdk_ansible::BoolOrString>,
+    pub show_nodes: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

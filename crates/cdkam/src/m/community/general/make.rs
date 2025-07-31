@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,31 +21,31 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "chdir"
     )]
-    pub chdir: OptU<::cdk_ansible::StringOrPath>,
+    pub chdir: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "file"
     )]
-    pub file: OptU<::cdk_ansible::StringOrPath>,
+    pub file: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "jobs"
     )]
-    pub jobs: OptU<::cdk_ansible::IntOrString>,
+    pub jobs: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "make"
     )]
-    pub make: OptU<::cdk_ansible::StringOrPath>,
+    pub make: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "params"
     )]
-    pub params: OptU<::cdk_ansible::StringOrMap>,
+    pub params: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,5 +57,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "targets"
     )]
-    pub targets: OptU<::cdk_ansible::StringOrVec>,
+    pub targets: OptU<::cdk_ansible_core::core::StringOrVec>,
 }

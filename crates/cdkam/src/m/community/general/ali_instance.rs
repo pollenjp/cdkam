@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -27,7 +27,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "alicloud_assume_role"
     )]
-    pub alicloud_assume_role: OptU<::cdk_ansible::StringOrMap>,
+    pub alicloud_assume_role: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -39,7 +39,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "alicloud_assume_role_session_expiration"
     )]
-    pub alicloud_assume_role_session_expiration: OptU<::cdk_ansible::IntOrString>,
+    pub alicloud_assume_role_session_expiration: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -69,19 +69,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "allocate_public_ip"
     )]
-    pub allocate_public_ip: OptU<::cdk_ansible::BoolOrString>,
+    pub allocate_public_ip: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "auto_renew"
     )]
-    pub auto_renew: OptU<::cdk_ansible::BoolOrString>,
+    pub auto_renew: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "auto_renew_period"
     )]
-    pub auto_renew_period: OptU<::cdk_ansible::IntOrString>,
+    pub auto_renew_period: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -93,7 +93,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "count"
     )]
-    pub count: OptU<::cdk_ansible::IntOrString>,
+    pub count: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -111,7 +111,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "dry_run"
     )]
-    pub dry_run: OptU<::cdk_ansible::BoolOrString>,
+    pub dry_run: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -123,7 +123,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "force"
     )]
-    pub force: OptU<::cdk_ansible::BoolOrString>,
+    pub force: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -141,7 +141,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "include_data_disks"
     )]
-    pub include_data_disks: OptU<::cdk_ansible::BoolOrString>,
+    pub include_data_disks: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -153,7 +153,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "instance_ids"
     )]
-    pub instance_ids: OptU<::cdk_ansible::StringOrVec>,
+    pub instance_ids: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -183,13 +183,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "max_bandwidth_in"
     )]
-    pub max_bandwidth_in: OptU<::cdk_ansible::IntOrString>,
+    pub max_bandwidth_in: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "max_bandwidth_out"
     )]
-    pub max_bandwidth_out: OptU<::cdk_ansible::IntOrString>,
+    pub max_bandwidth_out: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -201,7 +201,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "period"
     )]
-    pub period: OptU<::cdk_ansible::IntOrString>,
+    pub period: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -219,7 +219,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "purge_tags"
     )]
-    pub purge_tags: OptU<::cdk_ansible::BoolOrString>,
+    pub purge_tags: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -231,7 +231,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "security_groups"
     )]
-    pub security_groups: OptU<::cdk_ansible::StringOrVec>,
+    pub security_groups: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -279,19 +279,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "system_disk_size"
     )]
-    pub system_disk_size: OptU<::cdk_ansible::IntOrString>,
+    pub system_disk_size: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "tags"
     )]
-    pub tags: OptU<::cdk_ansible::StringOrMap>,
+    pub tags: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "unique_suffix"
     )]
-    pub unique_suffix: OptU<::cdk_ansible::BoolOrString>,
+    pub unique_suffix: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

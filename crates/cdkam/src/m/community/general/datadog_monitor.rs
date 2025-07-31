@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -57,13 +57,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "include_tags"
     )]
-    pub include_tags: OptU<::cdk_ansible::BoolOrString>,
+    pub include_tags: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "locked"
     )]
-    pub locked: OptU<::cdk_ansible::BoolOrString>,
+    pub locked: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -99,19 +99,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "notify_audit"
     )]
-    pub notify_audit: OptU<::cdk_ansible::BoolOrString>,
+    pub notify_audit: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "notify_no_data"
     )]
-    pub notify_no_data: OptU<::cdk_ansible::BoolOrString>,
+    pub notify_no_data: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "priority"
     )]
-    pub priority: OptU<::cdk_ansible::IntOrString>,
+    pub priority: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -129,25 +129,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "renotify_occurrences"
     )]
-    pub renotify_occurrences: OptU<::cdk_ansible::IntOrString>,
+    pub renotify_occurrences: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "renotify_statuses"
     )]
-    pub renotify_statuses: OptU<::cdk_ansible::StringOrVec>,
+    pub renotify_statuses: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "require_full_window"
     )]
-    pub require_full_window: OptU<::cdk_ansible::BoolOrString>,
+    pub require_full_window: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "silenced"
     )]
-    pub silenced: OptU<::cdk_ansible::StringOrMap>,
+    pub silenced: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -159,13 +159,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "tags"
     )]
-    pub tags: OptU<::cdk_ansible::StringOrVec>,
+    pub tags: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "thresholds"
     )]
-    pub thresholds: OptU<::cdk_ansible::StringOrMap>,
+    pub thresholds: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
