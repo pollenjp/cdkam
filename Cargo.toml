@@ -13,7 +13,7 @@ keywords = ["ansible", "cdk", "cdk-ansible"]
 [workspace.dependencies]
 cdkam = { path = "crates/cdkam" }
 
-cdk-ansible = { version = "0.2" }
+cdk-ansible = { version = "0.3" }
 
 anyhow = { version = "1.0.95" }
 indexmap = { version = "2.7.1", features = ["serde"] }
