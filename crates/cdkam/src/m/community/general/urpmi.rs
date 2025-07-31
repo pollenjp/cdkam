@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,19 +21,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "force"
     )]
-    pub force: OptU<::cdk_ansible::BoolOrString>,
+    pub force: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "name"
     )]
-    pub name: OptU<::cdk_ansible::StringOrVec>,
+    pub name: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "no_recommends"
     )]
-    pub no_recommends: OptU<::cdk_ansible::BoolOrString>,
+    pub no_recommends: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -51,5 +51,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "update_cache"
     )]
-    pub update_cache: OptU<::cdk_ansible::BoolOrString>,
+    pub update_cache: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

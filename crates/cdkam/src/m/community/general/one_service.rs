@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -39,25 +39,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "cardinality"
     )]
-    pub cardinality: OptU<::cdk_ansible::IntOrString>,
+    pub cardinality: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "custom_attrs"
     )]
-    pub custom_attrs: OptU<::cdk_ansible::StringOrMap>,
+    pub custom_attrs: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "force"
     )]
-    pub force: OptU<::cdk_ansible::BoolOrString>,
+    pub force: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "group_id"
     )]
-    pub group_id: OptU<::cdk_ansible::IntOrString>,
+    pub group_id: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -69,7 +69,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "owner_id"
     )]
-    pub owner_id: OptU<::cdk_ansible::IntOrString>,
+    pub owner_id: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,7 +81,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "service_id"
     )]
-    pub service_id: OptU<::cdk_ansible::IntOrString>,
+    pub service_id: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -99,7 +99,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "template_id"
     )]
-    pub template_id: OptU<::cdk_ansible::IntOrString>,
+    pub template_id: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -111,17 +111,17 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "unique"
     )]
-    pub unique: OptU<::cdk_ansible::BoolOrString>,
+    pub unique: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait"
     )]
-    pub wait: OptU<::cdk_ansible::BoolOrString>,
+    pub wait: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_timeout"
     )]
-    pub wait_timeout: OptU<::cdk_ansible::IntOrString>,
+    pub wait_timeout: OptU<::cdk_ansible_core::core::IntOrString>,
 }

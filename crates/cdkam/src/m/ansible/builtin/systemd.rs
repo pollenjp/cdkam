@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,31 +21,31 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "daemon_reexec"
     )]
-    pub daemon_reexec: OptU<::cdk_ansible::BoolOrString>,
+    pub daemon_reexec: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "daemon_reload"
     )]
-    pub daemon_reload: OptU<::cdk_ansible::BoolOrString>,
+    pub daemon_reload: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "enabled"
     )]
-    pub enabled: OptU<::cdk_ansible::BoolOrString>,
+    pub enabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "force"
     )]
-    pub force: OptU<::cdk_ansible::BoolOrString>,
+    pub force: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "masked"
     )]
-    pub masked: OptU<::cdk_ansible::BoolOrString>,
+    pub masked: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,7 +57,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "no_block"
     )]
-    pub no_block: OptU<::cdk_ansible::BoolOrString>,
+    pub no_block: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

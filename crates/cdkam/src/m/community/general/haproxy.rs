@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "agent"
     )]
-    pub agent: OptU<::cdk_ansible::BoolOrString>,
+    pub agent: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -33,19 +33,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "drain"
     )]
-    pub drain: OptU<::cdk_ansible::BoolOrString>,
+    pub drain: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "fail_on_not_found"
     )]
-    pub fail_on_not_found: OptU<::cdk_ansible::BoolOrString>,
+    pub fail_on_not_found: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "health"
     )]
-    pub health: OptU<::cdk_ansible::BoolOrString>,
+    pub health: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,13 +57,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "shutdown_sessions"
     )]
-    pub shutdown_sessions: OptU<::cdk_ansible::BoolOrString>,
+    pub shutdown_sessions: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "socket"
     )]
-    pub socket: OptU<::cdk_ansible::StringOrPath>,
+    pub socket: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -75,19 +75,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "wait"
     )]
-    pub wait: OptU<::cdk_ansible::BoolOrString>,
+    pub wait: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_interval"
     )]
-    pub wait_interval: OptU<::cdk_ansible::IntOrString>,
+    pub wait_interval: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_retries"
     )]
-    pub wait_retries: OptU<::cdk_ansible::IntOrString>,
+    pub wait_retries: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

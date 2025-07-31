@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ports"
     )]
-    pub ports: OptU<::cdk_ansible::StringOrVec>,
+    pub ports: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -33,7 +33,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "server_ids"
     )]
-    pub server_ids: OptU<::cdk_ansible::StringOrVec>,
+    pub server_ids: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -45,5 +45,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "wait"
     )]
-    pub wait: OptU<::cdk_ansible::BoolOrString>,
+    pub wait: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "abort_on_timeout"
     )]
-    pub abort_on_timeout: OptU<::cdk_ansible::BoolOrString>,
+    pub abort_on_timeout: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -33,19 +33,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "api_version"
     )]
-    pub api_version: OptU<::cdk_ansible::IntOrString>,
+    pub api_version: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "client_cert"
     )]
-    pub client_cert: OptU<::cdk_ansible::StringOrPath>,
+    pub client_cert: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "client_key"
     )]
-    pub client_key: OptU<::cdk_ansible::StringOrPath>,
+    pub client_key: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,13 +57,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "force"
     )]
-    pub force: OptU<::cdk_ansible::BoolOrString>,
+    pub force: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "force_basic_auth"
     )]
-    pub force_basic_auth: OptU<::cdk_ansible::BoolOrString>,
+    pub force_basic_auth: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,7 +81,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "job_options"
     )]
-    pub job_options: OptU<::cdk_ansible::StringOrMap>,
+    pub job_options: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -117,35 +117,35 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "use_gssapi"
     )]
-    pub use_gssapi: OptU<::cdk_ansible::BoolOrString>,
+    pub use_gssapi: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "use_proxy"
     )]
-    pub use_proxy: OptU<::cdk_ansible::BoolOrString>,
+    pub use_proxy: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_execution"
     )]
-    pub wait_execution: OptU<::cdk_ansible::BoolOrString>,
+    pub wait_execution: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_execution_delay"
     )]
-    pub wait_execution_delay: OptU<::cdk_ansible::IntOrString>,
+    pub wait_execution_delay: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_execution_timeout"
     )]
-    pub wait_execution_timeout: OptU<::cdk_ansible::IntOrString>,
+    pub wait_execution_timeout: OptU<::cdk_ansible_core::core::IntOrString>,
 }

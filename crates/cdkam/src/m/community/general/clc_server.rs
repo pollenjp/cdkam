@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,13 +21,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "add_public_ip"
     )]
-    pub add_public_ip: OptU<::cdk_ansible::BoolOrString>,
+    pub add_public_ip: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "additional_disks"
     )]
-    pub additional_disks: OptU<::cdk_ansible::StringOrVec>,
+    pub additional_disks: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -69,7 +69,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "count"
     )]
-    pub count: OptU<::cdk_ansible::IntOrString>,
+    pub count: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,7 +81,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "cpu"
     )]
-    pub cpu: OptU<::cdk_ansible::IntOrString>,
+    pub cpu: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -93,7 +93,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "custom_fields"
     )]
-    pub custom_fields: OptU<::cdk_ansible::StringOrVec>,
+    pub custom_fields: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -105,7 +105,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "exact_count"
     )]
-    pub exact_count: OptU<::cdk_ansible::IntOrString>,
+    pub exact_count: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -129,13 +129,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "managed_os"
     )]
-    pub managed_os: OptU<::cdk_ansible::BoolOrString>,
+    pub managed_os: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "memory"
     )]
-    pub memory: OptU<::cdk_ansible::IntOrString>,
+    pub memory: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -159,7 +159,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "packages"
     )]
-    pub packages: OptU<::cdk_ansible::StringOrVec>,
+    pub packages: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -177,7 +177,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "public_ip_ports"
     )]
-    pub public_ip_ports: OptU<::cdk_ansible::StringOrVec>,
+    pub public_ip_ports: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -195,7 +195,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "server_ids"
     )]
-    pub server_ids: OptU<::cdk_ansible::StringOrVec>,
+    pub server_ids: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -237,5 +237,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "wait"
     )]
-    pub wait: OptU<::cdk_ansible::BoolOrString>,
+    pub wait: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

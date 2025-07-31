@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -39,13 +39,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "cert_path"
     )]
-    pub cert_path: OptU<::cdk_ansible::StringOrPath>,
+    pub cert_path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "cert_port"
     )]
-    pub cert_port: OptU<::cdk_ansible::IntOrString>,
+    pub cert_port: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -69,7 +69,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "keystore_create"
     )]
-    pub keystore_create: OptU<::cdk_ansible::BoolOrString>,
+    pub keystore_create: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,7 +81,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "keystore_path"
     )]
-    pub keystore_path: OptU<::cdk_ansible::StringOrPath>,
+    pub keystore_path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -117,7 +117,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "pkcs12_path"
     )]
-    pub pkcs12_path: OptU<::cdk_ansible::StringOrPath>,
+    pub pkcs12_path: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -153,11 +153,11 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "trust_cacert"
     )]
-    pub trust_cacert: OptU<::cdk_ansible::BoolOrString>,
+    pub trust_cacert: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "unsafe_writes"
     )]
-    pub unsafe_writes: OptU<::cdk_ansible::BoolOrString>,
+    pub unsafe_writes: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

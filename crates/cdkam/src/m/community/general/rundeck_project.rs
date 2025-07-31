@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -27,31 +27,31 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "api_version"
     )]
-    pub api_version: OptU<::cdk_ansible::IntOrString>,
+    pub api_version: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "client_cert"
     )]
-    pub client_cert: OptU<::cdk_ansible::StringOrPath>,
+    pub client_cert: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "client_key"
     )]
-    pub client_key: OptU<::cdk_ansible::StringOrPath>,
+    pub client_key: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "force"
     )]
-    pub force: OptU<::cdk_ansible::BoolOrString>,
+    pub force: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "force_basic_auth"
     )]
-    pub force_basic_auth: OptU<::cdk_ansible::BoolOrString>,
+    pub force_basic_auth: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -93,17 +93,17 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "use_gssapi"
     )]
-    pub use_gssapi: OptU<::cdk_ansible::BoolOrString>,
+    pub use_gssapi: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "use_proxy"
     )]
-    pub use_proxy: OptU<::cdk_ansible::BoolOrString>,
+    pub use_proxy: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

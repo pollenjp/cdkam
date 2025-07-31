@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,31 +21,31 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "accept_pubkey"
     )]
-    pub accept_pubkey: OptU<::cdk_ansible::BoolOrString>,
+    pub accept_pubkey: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "name"
     )]
-    pub name: OptU<::cdk_ansible::StringOrVec>,
+    pub name: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "recurse"
     )]
-    pub recurse: OptU<::cdk_ansible::BoolOrString>,
+    pub recurse: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "repositories"
     )]
-    pub repositories: OptU<::cdk_ansible::StringOrVec>,
+    pub repositories: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "root"
     )]
-    pub root: OptU<::cdk_ansible::StringOrPath>,
+    pub root: OptU<::cdk_ansible_core::core::StringOrPath>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -57,17 +57,17 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "update_cache"
     )]
-    pub update_cache: OptU<::cdk_ansible::BoolOrString>,
+    pub update_cache: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "upgrade"
     )]
-    pub upgrade: OptU<::cdk_ansible::BoolOrString>,
+    pub upgrade: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "upgrade_xbps"
     )]
-    pub upgrade_xbps: OptU<::cdk_ansible::BoolOrString>,
+    pub upgrade_xbps: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

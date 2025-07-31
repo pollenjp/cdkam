@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "headers"
     )]
-    pub headers: OptU<::cdk_ansible::StringOrMap>,
+    pub headers: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -39,73 +39,73 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "path"
     )]
-    pub path: OptU<::cdk_ansible::StringOrVec>,
+    pub path: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skip_custom_threats_filters"
     )]
-    pub skip_custom_threats_filters: OptU<::cdk_ansible::StringOrVec>,
+    pub skip_custom_threats_filters: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skip_threats_filter_categories"
     )]
-    pub skip_threats_filter_categories: OptU<::cdk_ansible::StringOrVec>,
+    pub skip_threats_filter_categories: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skipav"
     )]
-    pub skipav: OptU<::cdk_ansible::BoolOrString>,
+    pub skipav: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skipbadclients"
     )]
-    pub skipbadclients: OptU<::cdk_ansible::BoolOrString>,
+    pub skipbadclients: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skipcookie"
     )]
-    pub skipcookie: OptU<::cdk_ansible::BoolOrString>,
+    pub skipcookie: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skipform"
     )]
-    pub skipform: OptU<::cdk_ansible::BoolOrString>,
+    pub skipform: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skipform_missingtoken"
     )]
-    pub skipform_missingtoken: OptU<::cdk_ansible::BoolOrString>,
+    pub skipform_missingtoken: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skiphtmlrewrite"
     )]
-    pub skiphtmlrewrite: OptU<::cdk_ansible::BoolOrString>,
+    pub skiphtmlrewrite: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skiptft"
     )]
-    pub skiptft: OptU<::cdk_ansible::BoolOrString>,
+    pub skiptft: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "skipurl"
     )]
-    pub skipurl: OptU<::cdk_ansible::BoolOrString>,
+    pub skipurl: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "source"
     )]
-    pub source: OptU<::cdk_ansible::StringOrVec>,
+    pub source: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -117,7 +117,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "status"
     )]
-    pub status: OptU<::cdk_ansible::BoolOrString>,
+    pub status: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -129,7 +129,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "utm_port"
     )]
-    pub utm_port: OptU<::cdk_ansible::IntOrString>,
+    pub utm_port: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -147,5 +147,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

@@ -8,6 +8,9 @@
       "path": "./crates/simple-sample"
     },
     {
+      "path": "./xtasks/"
+    },
+    {
       "name": "root",
       "path": "."
     },

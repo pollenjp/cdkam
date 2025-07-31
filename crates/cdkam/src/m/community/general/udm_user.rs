@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -57,7 +57,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "email"
     )]
-    pub email: OptU<::cdk_ansible::StringOrVec>,
+    pub email: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -87,7 +87,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "groups"
     )]
-    pub groups: OptU<::cdk_ansible::StringOrVec>,
+    pub groups: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -105,7 +105,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "home_telephone_number"
     )]
-    pub home_telephone_number: OptU<::cdk_ansible::StringOrVec>,
+    pub home_telephone_number: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -123,7 +123,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "mail_alternative_address"
     )]
-    pub mail_alternative_address: OptU<::cdk_ansible::StringOrVec>,
+    pub mail_alternative_address: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -141,7 +141,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "mobile_telephone_number"
     )]
-    pub mobile_telephone_number: OptU<::cdk_ansible::StringOrVec>,
+    pub mobile_telephone_number: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -159,19 +159,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "overridePWHistory"
     )]
-    pub override_pw_history: OptU<::cdk_ansible::BoolOrString>,
+    pub override_pw_history: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "overridePWLength"
     )]
-    pub override_pw_length: OptU<::cdk_ansible::BoolOrString>,
+    pub override_pw_length: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "pager_telephonenumber"
     )]
-    pub pager_telephonenumber: OptU<::cdk_ansible::StringOrVec>,
+    pub pager_telephonenumber: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -183,7 +183,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "phone"
     )]
-    pub phone: OptU<::cdk_ansible::StringOrVec>,
+    pub phone: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -225,13 +225,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "samba_privileges"
     )]
-    pub samba_privileges: OptU<::cdk_ansible::StringOrVec>,
+    pub samba_privileges: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "samba_user_workstations"
     )]
-    pub samba_user_workstations: OptU<::cdk_ansible::StringOrVec>,
+    pub samba_user_workstations: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -249,13 +249,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "secretary"
     )]
-    pub secretary: OptU<::cdk_ansible::StringOrVec>,
+    pub secretary: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "serviceprovider"
     )]
-    pub serviceprovider: OptU<::cdk_ansible::StringOrVec>,
+    pub serviceprovider: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

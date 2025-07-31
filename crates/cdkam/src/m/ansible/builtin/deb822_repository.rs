@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,61 +21,61 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "allow_downgrade_to_insecure"
     )]
-    pub allow_downgrade_to_insecure: OptU<::cdk_ansible::BoolOrString>,
+    pub allow_downgrade_to_insecure: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "allow_insecure"
     )]
-    pub allow_insecure: OptU<::cdk_ansible::BoolOrString>,
+    pub allow_insecure: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "allow_weak"
     )]
-    pub allow_weak: OptU<::cdk_ansible::BoolOrString>,
+    pub allow_weak: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "architectures"
     )]
-    pub architectures: OptU<::cdk_ansible::StringOrVec>,
+    pub architectures: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "by_hash"
     )]
-    pub by_hash: OptU<::cdk_ansible::BoolOrString>,
+    pub by_hash: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "check_date"
     )]
-    pub check_date: OptU<::cdk_ansible::BoolOrString>,
+    pub check_date: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "check_valid_until"
     )]
-    pub check_valid_until: OptU<::cdk_ansible::BoolOrString>,
+    pub check_valid_until: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "components"
     )]
-    pub components: OptU<::cdk_ansible::StringOrVec>,
+    pub components: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "date_max_future"
     )]
-    pub date_max_future: OptU<::cdk_ansible::IntOrString>,
+    pub date_max_future: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "enabled"
     )]
-    pub enabled: OptU<::cdk_ansible::BoolOrString>,
+    pub enabled: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -87,7 +87,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "languages"
     )]
-    pub languages: OptU<::cdk_ansible::StringOrVec>,
+    pub languages: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -105,7 +105,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "pdiffs"
     )]
-    pub pdiffs: OptU<::cdk_ansible::BoolOrString>,
+    pub pdiffs: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -123,29 +123,29 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "suites"
     )]
-    pub suites: OptU<::cdk_ansible::StringOrVec>,
+    pub suites: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "targets"
     )]
-    pub targets: OptU<::cdk_ansible::StringOrVec>,
+    pub targets: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "trusted"
     )]
-    pub trusted: OptU<::cdk_ansible::BoolOrString>,
+    pub trusted: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "types"
     )]
-    pub types: OptU<::cdk_ansible::StringOrVec>,
+    pub types: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "uris"
     )]
-    pub uris: OptU<::cdk_ansible::StringOrVec>,
+    pub uris: OptU<::cdk_ansible_core::core::StringOrVec>,
 }

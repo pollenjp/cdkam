@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,37 +21,37 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "backup_crypt_files"
     )]
-    pub backup_crypt_files: OptU<::cdk_ansible::BoolOrString>,
+    pub backup_crypt_files: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "backup_dmapi_fs"
     )]
-    pub backup_dmapi_fs: OptU<::cdk_ansible::BoolOrString>,
+    pub backup_dmapi_fs: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "create_map_files"
     )]
-    pub create_map_files: OptU<::cdk_ansible::BoolOrString>,
+    pub create_map_files: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "exclude_files"
     )]
-    pub exclude_files: OptU<::cdk_ansible::BoolOrString>,
+    pub exclude_files: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "exclude_wpar_files"
     )]
-    pub exclude_wpar_files: OptU<::cdk_ansible::BoolOrString>,
+    pub exclude_wpar_files: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "extended_attrs"
     )]
-    pub extended_attrs: OptU<::cdk_ansible::BoolOrString>,
+    pub extended_attrs: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -63,13 +63,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "new_image_data"
     )]
-    pub new_image_data: OptU<::cdk_ansible::BoolOrString>,
+    pub new_image_data: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "software_packing"
     )]
-    pub software_packing: OptU<::cdk_ansible::BoolOrString>,
+    pub software_packing: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,5 +81,5 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "use_snapshot"
     )]
-    pub use_snapshot: OptU<::cdk_ansible::BoolOrString>,
+    pub use_snapshot: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -33,7 +33,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "chain_management"
     )]
-    pub chain_management: OptU<::cdk_ansible::BoolOrString>,
+    pub chain_management: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -45,7 +45,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ctstate"
     )]
-    pub ctstate: OptU<::cdk_ansible::StringOrVec>,
+    pub ctstate: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -63,7 +63,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "destination_ports"
     )]
-    pub destination_ports: OptU<::cdk_ansible::StringOrVec>,
+    pub destination_ports: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -75,7 +75,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "flush"
     )]
-    pub flush: OptU<::cdk_ansible::BoolOrString>,
+    pub flush: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -153,7 +153,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "match"
     )]
-    pub match_x_: OptU<::cdk_ansible::StringOrVec>,
+    pub match_x_: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -171,7 +171,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "numeric"
     )]
-    pub numeric: OptU<::cdk_ansible::BoolOrString>,
+    pub numeric: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -261,7 +261,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "tcp_flags"
     )]
-    pub tcp_flags: OptU<::cdk_ansible::StringOrMap>,
+    pub tcp_flags: OptU<::cdk_ansible_core::core::StringOrMap>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",

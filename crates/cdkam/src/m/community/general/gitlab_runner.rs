@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -27,13 +27,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "access_level_on_creation"
     )]
-    pub access_level_on_creation: OptU<::cdk_ansible::BoolOrString>,
+    pub access_level_on_creation: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "active"
     )]
-    pub active: OptU<::cdk_ansible::BoolOrString>,
+    pub active: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -93,25 +93,25 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "locked"
     )]
-    pub locked: OptU<::cdk_ansible::BoolOrString>,
+    pub locked: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "maximum_timeout"
     )]
-    pub maximum_timeout: OptU<::cdk_ansible::IntOrString>,
+    pub maximum_timeout: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "owned"
     )]
-    pub owned: OptU<::cdk_ansible::BoolOrString>,
+    pub owned: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "paused"
     )]
-    pub paused: OptU<::cdk_ansible::BoolOrString>,
+    pub paused: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -129,7 +129,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "run_untagged"
     )]
-    pub run_untagged: OptU<::cdk_ansible::BoolOrString>,
+    pub run_untagged: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -141,11 +141,11 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "tag_list"
     )]
-    pub tag_list: OptU<::cdk_ansible::StringOrVec>,
+    pub tag_list: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "validate_certs"
     )]
-    pub validate_certs: OptU<::cdk_ansible::BoolOrString>,
+    pub validate_certs: OptU<::cdk_ansible_core::core::BoolOrString>,
 }

@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,7 +21,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "cpus"
     )]
-    pub cpus: OptU<::cdk_ansible::IntOrString>,
+    pub cpus: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -33,13 +33,13 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "dedicated"
     )]
-    pub dedicated: OptU<::cdk_ansible::BoolOrString>,
+    pub dedicated: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "disks"
     )]
-    pub disks: OptU<::cdk_ansible::StringOrVec>,
+    pub disks: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -63,7 +63,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "hourly"
     )]
-    pub hourly: OptU<::cdk_ansible::BoolOrString>,
+    pub hourly: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -81,19 +81,19 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "local_disk"
     )]
-    pub local_disk: OptU<::cdk_ansible::BoolOrString>,
+    pub local_disk: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "memory"
     )]
-    pub memory: OptU<::cdk_ansible::IntOrString>,
+    pub memory: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "nic_speed"
     )]
-    pub nic_speed: OptU<::cdk_ansible::IntOrString>,
+    pub nic_speed: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -111,7 +111,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "private"
     )]
-    pub private: OptU<::cdk_ansible::BoolOrString>,
+    pub private: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -129,7 +129,7 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "ssh_keys"
     )]
-    pub ssh_keys: OptU<::cdk_ansible::StringOrVec>,
+    pub ssh_keys: OptU<::cdk_ansible_core::core::StringOrVec>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
@@ -147,11 +147,11 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "wait"
     )]
-    pub wait: OptU<::cdk_ansible::BoolOrString>,
+    pub wait: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "wait_time"
     )]
-    pub wait_time: OptU<::cdk_ansible::IntOrString>,
+    pub wait_time: OptU<::cdk_ansible_core::core::IntOrString>,
 }

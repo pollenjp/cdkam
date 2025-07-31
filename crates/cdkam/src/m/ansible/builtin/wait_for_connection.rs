@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -21,23 +21,23 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "connect_timeout"
     )]
-    pub connect_timeout: OptU<::cdk_ansible::IntOrString>,
+    pub connect_timeout: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "delay"
     )]
-    pub delay: OptU<::cdk_ansible::IntOrString>,
+    pub delay: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "sleep"
     )]
-    pub sleep: OptU<::cdk_ansible::IntOrString>,
+    pub sleep: OptU<::cdk_ansible_core::core::IntOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "timeout"
     )]
-    pub timeout: OptU<::cdk_ansible::IntOrString>,
+    pub timeout: OptU<::cdk_ansible_core::core::IntOrString>,
 }

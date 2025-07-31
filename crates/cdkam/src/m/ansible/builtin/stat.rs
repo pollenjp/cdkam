@@ -1,6 +1,6 @@
 #[allow(unused_imports, reason = "Some modules may have empty `options` field")]
-use cdk_ansible::OptU;
-use cdk_ansible::TaskModule;
+use cdk_ansible_core::core::OptU;
+use cdk_ansible_core::core::TaskModule;
 use serde::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct Module {
@@ -27,29 +27,29 @@ pub struct Opt {
         skip_serializing_if = "OptU::is_unset",
         rename = "follow"
     )]
-    pub follow: OptU<::cdk_ansible::BoolOrString>,
+    pub follow: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "get_attributes"
     )]
-    pub get_attributes: OptU<::cdk_ansible::BoolOrString>,
+    pub get_attributes: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "get_checksum"
     )]
-    pub get_checksum: OptU<::cdk_ansible::BoolOrString>,
+    pub get_checksum: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "get_mime"
     )]
-    pub get_mime: OptU<::cdk_ansible::BoolOrString>,
+    pub get_mime: OptU<::cdk_ansible_core::core::BoolOrString>,
     #[serde(
         default = "OptU::default",
         skip_serializing_if = "OptU::is_unset",
         rename = "path"
     )]
-    pub path: OptU<::cdk_ansible::StringOrPath>,
+    pub path: OptU<::cdk_ansible_core::core::StringOrPath>,
 }
