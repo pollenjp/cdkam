@@ -128,9 +128,9 @@ dependencies = [
 
 [[package]]
 name = "cdk-ansible-core"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "360d636b306ec06cf0ea1f897f400e5394869910beafa8fcf90dac164bd61b10"
+checksum = "5b2fba2aff9fa7bdf657c7b1c00f92b649ad032a5fa5ef1a9d84dd39a3d08cb8"
 dependencies = [
  "dyn-clone",
  "erased-serde",
