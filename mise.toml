@@ -1,7 +1,7 @@
 [tools]
-cargo-binstall = "1.14.1"
-"cargo:cdk-ansible-cli" = "0.1.5"
-rust = "1.88.0"
+cargo-binstall = "1.17.7"
+"cargo:cdk-ansible-cli" = "0.2.8"
+rust = "1.94.0"
 
 [task_config]
 includes = ["tasks.toml", "xtasks"]
